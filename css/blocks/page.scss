@@ -1,0 +1,101 @@
+@import "../vars";
+
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.page__bg {
+  width: 100%;
+}
+
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.page__screen {
+  flex: 1 0 100%;
+  padding: 0 4.3rem;
+
+  &:last-child {
+    flex: 1 0 40%;
+  }
+
+  @media #{$mobile} {
+    padding: 0 2rem;
+  }
+}
+
+.page__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.page__pagination {
+  position: absolute;
+  top: 50%;
+  right: 6.5rem;
+  transform: translate(0, -45%);
+  display: flex;
+  flex-direction: column;
+
+  @media #{$tablet} {
+    right: 4.5rem;
+  }
+
+  @media #{$mobile-sm} {
+    right: 3.5rem;
+  }
+}
+
+.page__bullet {
+  cursor: pointer;
+  margin-bottom: 2.19rem;
+  transition: all .3s ease 0s;
+
+  @media #{$mobile} {
+    font-size: .9rem;
+  }
+
+  @media #{$mobile-sm} {
+    display: none;
+  }
+}
+
+.page__bullet_active {
+  transform: scale(1.2);
+}
+
+.page__scroll {
+  position: absolute;
+  top: 50%;
+  right: 4.3rem;
+  transform: translate(0, -50%);
+  width: 3px;
+  height: 15rem;
+  background: rgba(255, 255, 255, 0.5);
+
+  @media #{$tablet} {
+    right: 3.3rem;
+  }
+
+  @media #{$mobile-sm} {
+    display: none;
+  }
+}
+
+.page__drag-scroll {
+  width: 100%;
+  background: $white;
+  cursor: pointer;
+}

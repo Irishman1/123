@@ -1,0 +1,38 @@
+@import "../vars";
+
+.subtitle {
+  color: $yellow;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+
+  opacity: 0;
+  transform: translate(0, -120%);
+  transition: all .8s ease 0s;
+
+  :not(:first-child) {
+    transform: translate(-100%, 0);
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  @media #{$laptop} {
+    font-size: .9rem;
+  }
+
+  @media #{$mobile} {
+    font-size: .8rem;
+  }
+}
+
+.subtitle:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background-color: $yellow;
+  width: 4rem;
+  height: .1rem;
+  margin-right: .7rem;
+}

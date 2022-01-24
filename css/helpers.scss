@@ -1,0 +1,43 @@
+@import "vars";
+
+.central-block {
+  margin: 10rem auto 40rem;
+  padding: 0 5rem;
+
+  @media #{$laptop} {
+    margin-bottom: 35rem;
+  }
+
+  @media #{$tablet} {
+    margin-bottom: 50rem;
+  }
+
+  @media #{$mobile} {
+    margin-top: 13rem;
+  }
+
+  @media #{$mobile-sm} {
+    padding: 0;
+  }
+}
+
+.arrow {
+  padding-left: .9rem;
+}
+
+.scroll-box {
+  position: fixed;
+  top: 50%;
+  left: 4.3rem;
+  transform: translate(0, -50%);
+
+  z-index: 100;
+
+  @media #{$tablet} {
+    left: 3.3rem;
+  }
+
+  @media #{$mobile} {
+    display: none;
+  }
+}
